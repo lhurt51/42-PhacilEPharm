@@ -6,6 +6,17 @@ Install Rails
 *   ```gem install rails```
 *   ```rails -v```
 
+Then clone the repository
+*   ```git clone git@github.com:lhurt51/phacil-e-pharm.git```
+
+Next set up env
+*   ```cd phacil-e-pharm/```
+*   ```bundle install```
+
+Then run the server
+*   ```rails s```
+*   Go to this url: ```http://localhost:3000/```
+
 Rules for working on this App!
 
 * NEVER work off master, always create a new branch!
