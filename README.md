@@ -1,10 +1,10 @@
 Install Ruby (type in the command line)
-*   brew install ruby
-*   ruby -v		(to make sure you have installed it)
+*   ```brew install ruby```
+*   ```ruby -v```		(to make sure you have installed it)
 
 Install Rails
-*   gem install rails
-*   rails -v
+*   ```gem install rails```
+*   ```rails -v```
 
 Rules for working on this App!
 
