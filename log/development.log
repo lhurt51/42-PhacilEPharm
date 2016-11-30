@@ -2343,3 +2343,257 @@ Processing by PatientsController#show as HTML
 Completed 200 OK in 92ms (Views: 88.1ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/patients/1" for ::1 at 2016-11-30 15:37:25 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 407ms (Views: 363.1ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/patients/1/edit" for ::1 at 2016-11-30 15:37:32 -0800
+Processing by PatientsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/edit.html.erb within layouts/application
+  Rendered patients/_form.html.erb (83.1ms)
+  Rendered patients/edit.html.erb within layouts/application (90.2ms)
+Completed 200 OK in 189ms (Views: 176.8ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/patients/1" for ::1 at 2016-11-30 15:37:40 -0800
+Processing by PatientsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xV3U/VwXagzNSOshwxcdWU5xxBzotMQTTa1JS8fjWQ7HwoTF0lVoMiGnhPtRpghUtmLIv6G50fSNPoRNjVq7Dw==", "patient"=>{"user_name"=>"liamhur", "password_digest"=>"[FILTERED]", "first_name"=>"liam", "last_name"=>"hurt", "email"=>"liamhurt@gmail.com", "phone"=>""}, "commit"=>"Update Patient", "id"=>"1"}
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.0ms)[0m  [1m[33mUPDATE "patients" SET "user_name" = $1, "updated_at" = $2 WHERE "patients"."id" = $3[0m  [["user_name", "liamhur"], ["updated_at", 2016-11-30 23:37:40 UTC], ["id", 1]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/patients/1
+Completed 302 Found in 26ms (ActiveRecord: 13.2ms)
+
+
+Started GET "/patients/1" for ::1 at 2016-11-30 15:37:40 -0800
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 103ms (Views: 97.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/patients/1/edit" for ::1 at 2016-11-30 15:37:42 -0800
+Processing by PatientsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (6.5ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/edit.html.erb within layouts/application
+  Rendered patients/_form.html.erb (16.2ms)
+  Rendered patients/edit.html.erb within layouts/application (64.7ms)
+Completed 200 OK in 236ms (Views: 224.7ms | ActiveRecord: 6.5ms)
+
+
+Started PATCH "/patients/1" for ::1 at 2016-11-30 15:37:47 -0800
+Processing by PatientsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GVPKeelDxK1scxnq4mMLMYegkqedCidruIEzOGpludsbzJpBZwHGk4CcdjBw0h48f7OeBNQHMox4Ev4+INxb2g==", "patient"=>{"user_name"=>"liamhurt51", "password_digest"=>"[FILTERED]", "first_name"=>"liam", "last_name"=>"hurt", "email"=>"liamhurt@gmail.com", "phone"=>""}, "commit"=>"Update Patient", "id"=>"1"}
+  [1m[36mPatient Load (2.1ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[33mUPDATE "patients" SET "user_name" = $1, "updated_at" = $2 WHERE "patients"."id" = $3[0m  [["user_name", "liamhurt51"], ["updated_at", 2016-11-30 23:37:47 UTC], ["id", 1]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/patients/1
+Completed 302 Found in 17ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/patients/1" for ::1 at 2016-11-30 15:37:47 -0800
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 71ms (Views: 63.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/patients/1" for ::1 at 2016-11-30 15:43:00 -0800
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3058ms (Views: 3055.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/patients/1" for ::1 at 2016-11-30 15:44:06 -0800
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 2387ms (Views: 2384.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/patients/1" for ::1 at 2016-11-30 15:44:25 -0800
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 2350ms (Views: 2346.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/patients/1" for ::1 at 2016-11-30 15:46:01 -0800
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 75ms (Views: 71.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/patients" for ::1 at 2016-11-30 15:46:05 -0800
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  Rendered patients/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 59ms (Views: 57.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/doctors" for ::1 at 2016-11-30 15:46:37 -0800
+Processing by DoctorsController#index as HTML
+  Rendering doctors/index.html.erb within layouts/application
+  [1m[36mDoctor Load (0.6ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  Rendered doctors/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 75ms (Views: 65.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/doctors/new" for ::1 at 2016-11-30 15:46:39 -0800
+Processing by DoctorsController#new as HTML
+  Rendering doctors/new.html.erb within layouts/application
+  Rendered doctors/_form.html.erb (16.5ms)
+  Rendered doctors/new.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 137ms (Views: 113.6ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/doctors" for ::1 at 2016-11-30 15:47:27 -0800
+Processing by DoctorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zJ75AlwkMFKD1fEwVIBZ6WFbJkmvVXSAdl99Aif3yQUUkJNvLtz0qHHdSdgVSJeOJpth/gZ35E7rNYMZ3IaFKg==", "doctor"=>{"user_name"=>"jeffy54", "password_digest"=>"[FILTERED]", "first_name"=>"Jeff", "last_name"=>"Yamamoto", "doctor_liscense"=>"546.784657", "email"=>"jeff2gmail.com", "phone"=>""}, "commit"=>"Create Doctor"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering doctors/new.html.erb within layouts/application
+  Rendered doctors/_form.html.erb (8.3ms)
+  Rendered doctors/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 73ms (Views: 66.4ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/doctors" for ::1 at 2016-11-30 15:47:38 -0800
+Processing by DoctorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2togR3tnSI5LLsh8+QxnzS0Dw3dYEmHBiC520bpJYb0eULBBESp1j449YMlqPxGaHpBwt3oknHRDS55fwiQr4Q==", "doctor"=>{"user_name"=>"jeffy54", "password_digest"=>"[FILTERED]", "first_name"=>"Jeff", "last_name"=>"Yamamoto", "doctor_liscense"=>"546.784657", "email"=>"jeff@gmail.com", "phone"=>""}, "commit"=>"Create Doctor"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "doctors" ("user_name", "first_name", "last_name", "doctor_liscense", "email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_name", "jeffy54"], ["first_name", "Jeff"], ["last_name", "Yamamoto"], ["doctor_liscense", "546.784657"], ["email", "jeff@gmail.com"], ["created_at", 2016-11-30 23:47:38 UTC], ["updated_at", 2016-11-30 23:47:38 UTC], ["password_digest", "password"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/doctors/1
+Completed 302 Found in 7ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/doctors/1" for ::1 at 2016-11-30 15:47:38 -0800
+Processing by DoctorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDoctor Load (0.3ms)[0m  [1m[34mSELECT  "doctors".* FROM "doctors" WHERE "doctors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering doctors/show.html.erb within layouts/application
+  Rendered doctors/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 71ms (Views: 66.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/doctors" for ::1 at 2016-11-30 15:47:41 -0800
+Processing by DoctorsController#index as HTML
+  Rendering doctors/index.html.erb within layouts/application
+  [1m[36mDoctor Load (0.9ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  Rendered doctors/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 90ms (Views: 84.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2016-11-30 15:48:24 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 47ms (Views: 45.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/patients" for ::1 at 2016-11-30 15:48:28 -0800
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  Rendered patients/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 51ms (Views: 48.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/patients/1" for ::1 at 2016-11-30 15:49:41 -0800
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 131ms (Views: 125.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/patients" for ::1 at 2016-11-30 15:51:29 -0800
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (10.5ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  Rendered patients/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 181ms (Views: 162.4ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/patients/1" for ::1 at 2016-11-30 15:51:31 -0800
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 169ms (Views: 161.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/patients/1" for ::1 at 2016-11-30 15:53:42 -0800
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 2660ms (Views: 2656.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/patients/1" for ::1 at 2016-11-30 15:54:23 -0800
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.6ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2588ms (Views: 2584.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/patients/1" for ::1 at 2016-11-30 15:54:55 -0800
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.6ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 2682ms (Views: 2678.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/patients/1" for ::1 at 2016-11-30 15:55:28 -0800
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2291ms (Views: 2287.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/patients/1" for ::1 at 2016-11-30 15:56:15 -0800
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2340ms (Views: 2337.2ms | ActiveRecord: 0.4ms)
+
+

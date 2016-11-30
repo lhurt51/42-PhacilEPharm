@@ -16,6 +16,7 @@ h3 {
 	color: white;
 	padding: 10px;
 	margin-bottom: 0px;
+	border-radius: 5px
 }
 
 .popover-title{
@@ -25,6 +26,7 @@ h3 {
 
 .back-btn {
 	background-color: white;
+	margin: 20px 0px;
 }
 
 .lists {
@@ -35,6 +37,7 @@ h3 {
 	-moz-box-shadow: 7px 7px 22px -2px rgba(0,0,0,0.75);
 	box-shadow: 7px 7px 22px -2px rgba(0,0,0,0.75);
 	padding: 10px;
+	border-radius: 5px;
 }
 
 p {
@@ -79,4 +82,5 @@ p {
 	margin: 10px;
 	width: 128px;
 	height: 128px;
+	border-radius: 50%;
 }
