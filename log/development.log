@@ -561,3 +561,10 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 502ms (Views: 500.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2016-11-30 13:40:14 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 65ms (Views: 63.3ms | ActiveRecord: 0.0ms)
+
+
