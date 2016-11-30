@@ -27,7 +27,11 @@ To add/commit/push to your branch
 To make a PR
 *	Make sure everything is pushed on your branch
 *	Go to ```https://github.com/lhurt51/phacil-e-pharm```
-*
+*	You should see you branch name at the top with a green ```compare & pull request``` click the button
+*	Leave a nice message on what u have accomplished with your PR.
+*	Then click ```create pull request```
+*	DO NOT CLICK ```merge pull request```!!!!!!!
+*	create a new branch and continue working
 
 Rules for working on this App!
 
