@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161130200435) do
+ActiveRecord::Schema.define(version: 20161130211422) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20161130200435) do
     t.integer  "phone"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "password_digest"
   end
 
   create_table "patients", force: :cascade do |t|
@@ -32,8 +33,9 @@ ActiveRecord::Schema.define(version: 20161130200435) do
     t.string   "last_name"
     t.string   "email"
     t.integer  "phone"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "password_digest"
   end
 
   create_table "perscriptions", force: :cascade do |t|
@@ -49,8 +51,9 @@ ActiveRecord::Schema.define(version: 20161130200435) do
     t.string   "company_name"
     t.string   "email"
     t.integer  "phone"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "password_digest"
   end
 
 end
