@@ -1,0 +1,2 @@
+class Perscription < ApplicationRecord
+end

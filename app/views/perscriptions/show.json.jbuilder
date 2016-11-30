@@ -1,0 +1,1 @@
+json.partial! "perscriptions/perscription", perscription: @perscription

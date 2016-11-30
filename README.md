@@ -38,3 +38,8 @@ Rules for working on this App!
 * NEVER work off master, always create a new branch!
 * Never merge your own branch to master, It will be reviewed for merge conflicts!
 * Use linter-ruby & linter-erb as your syntax guides
+
+Some useful sources
+*	```https://launchschool.com/blog/integrating-rails-and-bootstrap-part-1```
+*	```https://betterexplained.com/articles/intermediate-rails-understanding-models-views-and-controllers/```
+*	```http://guides.rubyonrails.org/association_basics.html```
