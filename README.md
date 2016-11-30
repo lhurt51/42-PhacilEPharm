@@ -12,10 +12,22 @@ Then clone the repository
 Next set up env
 *   ```cd phacil-e-pharm/```
 *   ```bundle install```
+*	```git checkout -b (Your branch name)``` (protects the master branch)
+*	always push to your branch ```git push origin (Your branch name)```
 
 Then run the server
 *   ```rails s```
 *   Go to this url: ```http://localhost:3000/```
+
+To add/commit/push to your branch
+*	```git add .```
+*	```git commit -m "(Your commit msg... make it relevant)"```
+*	```git push origin (Your branch name)```
+
+To make a PR
+*	Make sure everything is pushed on your branch
+*	Go to ```https://github.com/lhurt51/phacil-e-pharm```
+*
 
 Rules for working on this App!
 
