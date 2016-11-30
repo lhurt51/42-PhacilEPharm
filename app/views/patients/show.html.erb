@@ -1,29 +1,134 @@
-<p id="notice"><%= notice %></p>
+<div class="jumbotron text-center">
+	<h1>Facil-ePharm</h1>
+</div>
 
-<p>
-  <strong>User name:</strong>
-  <%= @patient.user_name %>
-</p>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-6">
+			<h3><img src="https://scontent.xx.fbcdn.net/v/t1.0-9/12004822_899505200102522_3492486936590443392_n.jpg?oh=f3c2f35098eeceac2a523b5299aeb0d3&oe=58AF5645" id="pic"><%= @patient.first_name %> <%= @patient.last_name %></h3>
+		</div>
+		<div class="col-sm-6">
+			<h3>Contact Info</h3>
+			<ul class="lists">
+				<li>Username: <%= @patient.user_name %></li>
+                <li>Email: <%= @patient.email %></li>
+                <li><p class="text-right"><%= link_to 'Edit', edit_patient_path(@patient), class: "btn btn-info btn-lg", id: "add"%></p></li>
+			</ul>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-4">
+			<h3>Current Scripts</h3>
+			<ul class="lists">
+				<li><a href="#" title="drug one" data-toggle="popover" data-trigger="hover" data-content="42 mg drug one info">Zoloft 25mg 60ct</a></li>
+				<li><p class="text-right"><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#payModal" id="add">$</button></p></li>
+			</ul>
+		</div>
+		<div class="col-sm-4">
+			<h3>Trusted Pharmacies</h3>
+			<ul class="lists">
+				<li><a href="#" title="pharm one" data-toggle="popover" data-trigger="hover" data-content="pharm one info">Mowry Medical Pharmacy</a></li>
+				<li><p class="text-right"><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="add">+</button></p></li>
+			</ul>
+		  <div class="modal fade" id="myModal" role="dialog">
+		    <div class="modal-dialog">
 
-<p>
-  <strong>First name:</strong>
-  <%= @patient.first_name %>
-</p>
+		      <!-- Modal content-->
+		      <div class="modal-content">
+		        <div class="modal-header">
+		          <button type="button" class="close" data-dismiss="modal">&times;</button>
+		          <h4 class="modal-title"><input type="text" placeholder="Enter search term here"></h4>
+		        </div>
+		        <div class="modal-body">
+		          <p>Search results</p>
+		        </div>
+		        <div class="modal-footer">
+		          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        </div>
+		      </div>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @patient.last_name %>
-</p>
+		    </div>
+		  </div>
+			<div class="modal fade" id="edit" role="dialog">
+		    <div class="modal-dialog">
 
-<p>
-  <strong>Email:</strong>
-  <%= @patient.email %>
-</p>
+		      <!-- Modal content-->
+		      <div class="modal-content">
+		        <div class="modal-header">
+		          <button type="button" class="close" data-dismiss="modal">&times;</button>
+		          <h4 class="modal-title"><input type="text" placeholder="enter new username"></h4>
+		        </div>
+		        <div class="modal-body">
+		          <p>username</p>
+		        </div>
+		        <div class="modal-footer">
+		          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        </div>
+		      </div>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @patient.phone %>
-</p>
+		    </div>
+		  </div>
+		  <div class="modal fade" id="payModal" role="dialog">
+		    <div class="modal-dialog">
 
-<%= link_to 'Edit', edit_patient_path(@patient) %> |
-<%= link_to 'Back', patients_path %>
+		      <!-- Modal content-->
+		      <div class="modal-content">
+		        <div class="modal-header">
+		          <button type="button" class="close" data-dismiss="modal">&times;</button>
+		          <h4 class="modal-title">Billing info</h4>
+		        </div>
+		        <div class="modal-body">
+				  <p>Amount owed: $42</p>
+		          <p>CC Number: <input type="text" placeholder="0000 0000 0000 0000"></p>
+				  <p>Exp:      <input type="text"placeholder="00/00"></p>
+		        </div>
+		        <div class="modal-footer">
+		          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        </div>
+		      </div>
+
+		    </div>
+		  </div>
+		  <div class="modal fade" id="logout" role="dialog">
+			<div class="modal-dialog">
+
+			  <!-- Modal content-->
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h4 class="modal-title">Log out</h4>
+				</div>
+				<div class="modal-body">
+				  <p>Are you sure you want to log out?</p>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-success" data-dismiss="modal">Yes</button>
+				  <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+				</div>
+			  </div>
+
+			</div>
+		  </div>
+		</div>
+		<div class="col-sm-4">
+			<h3>Current Doctors</h3>
+			<ul class="lists">
+				<li><a href="#" title="Dr. One" data-toggle="popover" data-trigger="hover" data-content="Dr. One info">Dr. Greg Paul</a></li>
+				<li><p class="text-right"><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="add">+</button></p></li>
+			</ul>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<h3>Ready for Pick-up</h3>
+			<ul class="lists">
+				<li><a href="#" title="prescription one" data-toggle="popover" data-trigger="hover" data-content="prescription one info">Your Zoloft is ready at Mowry Medical Pharmacy</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<script>
+	$(document).ready(function(){
+		$('[data-toggle="popover"]').popover();
+	});
+</script>
