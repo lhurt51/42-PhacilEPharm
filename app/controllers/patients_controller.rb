@@ -65,10 +65,11 @@ class PatientsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_patient
       @patient = Patient.find(params[:id])
+      p @patient
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def patient_params
-      params.require(:patient).permit(:user_name, :first_name, :last_name, :email, :phone)
+      params.require(:patient).permit(:user_name, :password_digest, :first_name, :last_name, :email, :phone)
     end
 end
